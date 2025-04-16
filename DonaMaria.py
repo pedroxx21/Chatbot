@@ -1,4 +1,4 @@
-Import ProjetoChatbot as ProjetoChatbot as pc
+import ProjetoChatbot as pc
 
 nome_maquina = 'Dona Maria'
 pc.saudacoes(nome_maquina)

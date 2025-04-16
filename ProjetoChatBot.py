@@ -34,6 +34,6 @@ def buscaResposta(nome,texto):
 
 def exibeResposta(resposta,nome):
     print(resposta.replace('Chatbot',nome))
-    if reposta == 'fim':
+    if resposta == 'fim':
         return 'fim'
     return 'continua'            
