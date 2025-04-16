@@ -1,4 +1,7 @@
-def saudacoes(nome):
+def exibeRespostas_GUI(texto,resposta,nome):
+    return resposta.replace('Chatbot',nome)
+
+def saudacoes_GUI(nome):
     import random
     frases = ['Bom dia, meu nome é: '+ nome + '. Como você está?', 'Olá!', 'Oi, tudo bem?']
     print(frases[random.randint(0,2)])
