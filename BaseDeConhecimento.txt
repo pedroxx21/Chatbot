@@ -10,3 +10,11 @@ Cliente: tchau
 Chatbot: vou bem
 Cliente: eu gosto muito
 Chatbot: Ola
+Cliente: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/Lopes/OneDrive - SENAC - SP/Documentos/Chatbot/InterfaceGrafica.py"
+Chatbot: main_window.mainloop()
+Cliente: stop
+Chatbot: stop
+Cliente: a
+Chatbot: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/Lopes/OneDrive - SENAC - SP/Documentos/Chatbot/DonaMaria.py"
+Cliente: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/Lopes/OneDrive - SENAC - SP/Documentos/Chatbot/DonaMaria.py"
+Chatbot: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/Lopes/OneDrive - SENAC - SP/Documentos/Chatbot/DonaMaria.py"
