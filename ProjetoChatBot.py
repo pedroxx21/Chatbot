@@ -1,6 +1,6 @@
 def saudacoes(nome):
     import random
-    frases = ['Bom dia, meu nome é: '+nome '. Como você está?', 'Olá!', 'Oi, tudo bem?']
+    frases = ['Bom dia, meu nome é: '+ nome + '. Como você está?', 'Olá!', 'Oi, tudo bem?']
     print(frases[random.randint(0,2)])
 
 def recebeTexto():
