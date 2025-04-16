@@ -22,3 +22,5 @@ Cliente: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:
 Chatbot: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/Lopes/OneDrive - SENAC - SP/Documentos/Chatbot/ProjetoChatbot.py"
 Cliente: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/Lopes/OneDrive - SENAC - SP/Documentos/Chatbot/ProjetoChatbot.py"
 Chatbot: & C:/Users/Lopes/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/Lopes/OneDrive - SENAC - SP/Documentos/Chatbot/InterfaceGrafica.py"
+Cliente: aa
+Chatbot: me ajuda

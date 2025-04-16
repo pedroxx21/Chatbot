@@ -6,16 +6,16 @@ def saudacoes_GUI(nome):
     frases = ['Bom dia, meu nome é: '+ nome + '. Como você está?', 'Olá!', 'Oi, tudo bem?']
     print(frases[random.randint(0,2)])
 
-def recebeTexto():
+def recebeTexto_GUI():
     texto = 'Cliente: ' + input('Cliente: ')
     palavraProibida = ['bocó']
     for p in palavraProibida:
         if p in texto:
             print('Não vem não! Me respeite!')
-            return recebeTexto()
+            return recebeTexto_GUI()
         return texto
 
-def buscaResposta(nome,texto):
+def buscaResposta_GUI(nome,texto):
     with open('BaseDeconhecimento.txt','a+') as conhecimento:
         conhecimento.seek(0)
         while True:
@@ -35,7 +35,7 @@ def buscaResposta(nome,texto):
                 conhecimento.write('\nChatbot: ' + respota_user)
                 return 'Hum... interessante!'
 
-def exibeResposta(resposta,nome):
+def exibeResposta_GUI(resposta,nome):
     print(resposta.replace('Chatbot',nome))
     if resposta == 'fim':
         return 'fim'
