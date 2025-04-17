@@ -15,6 +15,8 @@ def recebeTexto_GUI():
             return recebeTexto_GUI()
         return texto
 
+  
+
 def buscaResposta_GUI(texto):
     with open('BaseDeconhecimento.txt','a+') as conhecimento:
         conhecimento.seek(0)
@@ -39,3 +41,20 @@ def salva_sugestao(sugestao):
     with open('BaseDeconhecimento.txt','a+') as conhecimento:
         conhecimento.write('\nChatbot: ' + sugestao)
     
+def jaccard(textoUsuario, textobase):
+    textoUsuario = limpa_frase(textoUsuario)
+    textobase = limpa_frase(textobase)
+    if len(textobase)<1: return 0
+    else:
+        palavras_em_comum=0
+        for palavra in textoUsuario.split():
+            if palavra in textobase.split():
+                palavras_em_comum+=1
+        return palavras_em_comum/len(textobase.split())  
+
+def limpa_frase(frase):
+    tirar = ['.',',','!','?',';','-','_','@','#','$','%','&','*','(',')','[',']','{','}','<','>']
+    for i in tirar:
+        frase = frase.replace(i,'')
+    frase = frase.upper()
+    return frase
