@@ -8,10 +8,11 @@ main_window.geometry("500x700")
 
 main_window.grid()
 
-frame = Frame
+
+frame = Frame(main_window)
 frame.grid()
 
-l_identif = Label(Frame, text="Insira uma mensagem aqui: ")
+l_identif = Label(frame, text="Insira uma mensagem aqui: ")
 l_identif.grid(row=0, column=0)
 
 e_mensagem = Entry(frame)
@@ -64,7 +65,7 @@ def roda_chatbot():
                 historico_conversa += '\n' + pc.exibeResposta_GUI(texto,resposta,nome_maquina)
                 V.set(historico_conversa)
 
-
+            
 Button(frame, text= 'Clique', command=roda_chatbot).grid(row=0, column=2)
 
 main_window.mainloop()

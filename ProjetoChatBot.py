@@ -1,7 +1,7 @@
-def exibeRespostas_GUI(texto,resposta,nome):
+def exibeResposta_GUI(texto,resposta,nome):
     return resposta.replace('Chatbot',nome)
 
-def saudacoes_GUI(nome):
+def saudacao_GUI(nome):
     import random
     frases = ['Bom dia, meu nome é: '+ nome + '. Como você está?', 'Olá!', 'Oi, tudo bem?']
     print(frases[random.randint(0,2)])
@@ -15,28 +15,27 @@ def recebeTexto_GUI():
             return recebeTexto_GUI()
         return texto
 
-def buscaResposta_GUI(nome,texto):
+def buscaResposta_GUI(texto):
     with open('BaseDeconhecimento.txt','a+') as conhecimento:
         conhecimento.seek(0)
         while True:
             viu = conhecimento.readline()
             if viu != '':
-                if texto.replace('Cliente: ','') == 'Tchau':
-                    print(nome+ ': volte sempre!')
-                    return 'fim'
-                elif viu.strip() == texto.strip():
+                if jaccard(texto,viu) > 0.3:
                     proximaLinha = conhecimento.readline()
                     if 'Chatbot: ' in proximaLinha:
                         return proximaLinha
             else:
-                print('Me desculpe, não sei responder isso!')
-                conhecimento.write('\n' + texto)
-                respota_user = input('O que esperava?\n')
-                conhecimento.write('\nChatbot: ' + respota_user)
-                return 'Hum... interessante!'
-
+                conhecimento.write(texto)
+                return 'Me desculpe não sei o que falar'        
+            
 def exibeResposta_GUI(resposta,nome):
     print(resposta.replace('Chatbot',nome))
     if resposta == 'fim':
         return 'fim'
     return 'continua'            
+
+def salva_sugestao(sugestao):
+    with open('BaseDeconhecimento.txt','a+') as conhecimento:
+        conhecimento.write('\nChatbot: ' + sugestao)
+    
